@@ -1,0 +1,303 @@
+/*****************************************************************************
+balises principal
+*****************************************************************************/
+
+/* noir mat
+background-color: #4d4855;
+background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+*/
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+  /*background: linear-gradient(to right, #090778 20%, #01004a 100%);*/
+  background-image: url('../img/geo.jpg');
+  background-attachment: fixed;
+  background-position: bottom;
+  height: 2000px;
+}
+
+main {
+  padding: 0 5%;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/*****************************************************************************
+header
+*****************************************************************************/
+
+header {
+  width: 100%;
+  height: 500px;
+  background-image: url('../img/web.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border-bottom: 4px solid;
+  border-image-source: linear-gradient(to right, #4697e3 30%, #e8bca0 100%);
+  border-image-slice: 1;
+}
+
+@keyframes smoothTop-to-Bottom {
+  0% {top: -6em;}
+  30% {top: 3em;}
+  50% {top: 2.8em;}
+  100% {top: 3em;}
+}
+
+.menuPlaceholder {
+  width: 100%;
+  height: 220px;
+}
+
+header h2 {
+  font-size: 3em;
+  position: absolute;
+  top: 3em;
+  left: 0.7em;
+  z-index: 0;
+  background: linear-gradient(to right, #10b6e8 0%, orange 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: smoothTop-to-Bottom;
+  animation-duration: 2s;
+}
+
+#menuNav {
+  width: 100%;
+  padding: 15px 0;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+#menuNav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 1s;
+  border-radius: 20px;
+}
+
+#menuNav a:hover {
+  margin-left: 7px;
+}
+
+#currentTime {
+  color: white;
+  font-size: 1.3em;
+}
+
+@keyframes aboutR-to-L {
+  from {margin-left: -20em;}
+  50% {margin-left: 25em;}
+  to {margin-left: 2em;}
+}
+
+.aboutMe {
+  width: 30%;
+  padding: 10px 15px;
+  margin-left: 2em;
+  line-height: 1.5;
+  border-radius: 20px;
+  text-align: justify;
+  color: white;
+  background-color: rgba(53, 54, 56, 0.8);
+  animation-name: aboutR-to-L;
+  animation-duration: 2.5s;
+}
+
+/*****************************************************************************
+main
+*****************************************************************************/
+
+main h2 {
+  text-align: center;
+  margin: 30px -5%;
+  padding: 3px 0;
+}
+
+main h2 i {
+  font-size: 1.5em;
+}
+
+main section {
+  margin: 7% 0;
+}
+
+.mainH2 {
+  font-size: 2em;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  background: linear-gradient(to right, transparent 0%, #cf0c5a 50%, transparent 100%);
+  color: #ebebeb;
+}
+
+.paddingSpan {
+  padding: 0 1em;
+  transition: all 1.3s;
+}
+
+.mainH2 i {
+  color: #07b561;
+  vertical-align: sub;
+}
+
+/**************************************
+ensemble du contenu de #langagesFrame
+**************************************/
+
+#langagesFrame {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#langagesFrame div {
+  width: 13%;
+  height: 10em;
+  border-radius: 15%;
+  text-align: center;
+}
+
+.php {
+  border: solid 3px #6E7289;
+  color: #6E7289;
+}
+
+.js {
+  border: solid 3px #F7DF1E;
+  color: #F7DF1E;
+}
+
+.python {
+  border: solid 3px #396F9E;
+  color: #396F9E;
+}
+
+.sql {
+  border: solid 3px #F8E595;
+  color: #F8E595;
+}
+
+.html {
+  border: solid 3px #F16529;
+  color: #F16529;
+}
+
+.css {
+  border: solid 3px #2862EA;
+  color: #2862EA;
+}
+
+.jquery {
+  border: solid 3px #0769AD;
+  color: #0769AD;
+}
+
+/**************************************
+.expProSection
+**************************************/
+.expProSection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  transition: all 1s ease;
+}
+
+.expDiv {
+  width: 31%;
+  padding: 10px;
+  position: relative;
+  left: -95em;
+  border-radius: 15px;
+  background-image: url('../img/dotsBackground.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+  transition: all 0.5s ease;
+}
+
+.expDiv h3 {
+  margin: -9px -9px 10px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  background: rgba(204, 204, 204, 0.5);
+  color: #0330fc;
+  border-bottom: solid 2px #E44D26;
+}
+
+.expDiv p {
+  text-align: center;
+  font: message-box;
+  font-size: 1.1em;
+  color: #0a93c4;
+}
+
+.expDiv ul {
+  margin-left: -15px;
+}
+
+.expDiv li {
+  line-height: 2;
+  color: #e00d0d;
+  font-weight: bold;
+  list-style: none;
+}
+
+.expDiv span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 1px;
+  margin-right: 10px;
+  border-radius: 35%;
+}
+
+/**************************************
+.formationsSection
+**************************************/
+.formationsSection {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.formationsDiv {
+  width: 25em;
+  padding: 5px 15px 15px;
+  text-align: center;
+  background-color: #4d4855;
+  background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+  border-radius: 5px 5px 80px 80px;
+  color: white;
+  -webkit-box-shadow: 0px 0px 30px 5px rgba(51,48,54,1);
+  -moz-box-shadow: 0px 0px 30px 5px rgba(51,48,54,1);
+  box-shadow: 0px 0px 30px 5px rgba(51,48,54,1);
+}
+
+.formationsDiv ul {
+  list-style: none;
+  text-align: left;
+  line-height: 2;
+}
+
+.formationsDiv i {
+  margin-right: 6px;
+  font-size: 1.1em;
+}
