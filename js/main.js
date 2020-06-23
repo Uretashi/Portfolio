@@ -13,6 +13,8 @@ const expH2 = document.querySelectorAll('.mainH2');
 
 const expH2span = document.querySelectorAll('.paddingSpan');
 
+const smoothBar = document.querySelectorAll('#smoothBar');
+
 /*************************************************************************************************/
 /* ***************************************** FONCTIONS ***************************************** */
 /*************************************************************************************************/
@@ -63,16 +65,37 @@ window.addEventListener('scroll', function(e){
   {
     if(expH2[i].getBoundingClientRect().top < 125)
     {
-      expH2span[i].style.padding = '0 10em';
+      expH2span[i].style.padding = '0 20%';
     }
     else
     {
       expH2span[i].style.padding = '0 1em';
     }
   }
+
+  for (let i = 0; i < smoothBar.length; i++)
+  {
+    if(smoothBar[i].getBoundingClientRect().top < 350)
+    {
+      smoothBar[i].style.width = '100%';
+    }
+    else
+    {
+      smoothBar[i].style.width = '0';
+    }
+  }
+
 });
 
 nav.forEach((currentA) => {
+
+  if(window.innerWidth < 1024)
+  {
+    let color1 = randomColour(), color2 = randomColour();
+    currentA.style.borderBottom = 'solid 2px';
+    currentA.style.borderImageSource = 'linear-gradient(to right, '+ color1 +' 0%, '+ color2+' 100%)'
+  }
+
   currentA.onmouseover = function(){currentA.style.color = randomColour();};
   currentA.onmouseout = function(){currentA.style.color = 'white'};
 });

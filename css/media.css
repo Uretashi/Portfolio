@@ -1,0 +1,176 @@
+/*********************************************************
+style tablette
+*********************************************************/
+@media screen and (max-width: 1024px) {
+
+  /*****************************************************************************
+  header
+  *****************************************************************************/
+  header {
+    height: auto;
+  }
+
+  .me {
+    width: 60%;
+    font-size: 1.8em;
+  }
+
+  .devH2 {
+    width: 60%;
+    font-size: 1.6em;
+  }
+
+  .aboutH2 {
+    position: static;
+    font-size: 1.8em;
+    margin-left: 30px;
+    animation: none;
+  }
+
+  #menuNav a {
+    border-image-slice: 1;
+    transition: none;
+  }
+
+  .aboutMe {
+    width: 70%;
+    margin: 10px 25px 20px;
+    animation: none;
+  }
+
+  /*****************************************************************************
+  main
+  *****************************************************************************/
+  .mainH2 {
+    font-size: 1.6em;
+  }
+
+  /**************************************
+  #langagesFrame
+  **************************************/
+  .frontend, .backend, .frameworks {
+    width: 45%;
+    margin: 10px 0;
+  }
+
+  /**************************************
+  .expProSection
+  **************************************/
+  .expDiv {
+    width: 80%;
+    margin:  15px auto;
+  }
+
+  /**************************************
+  .realisationSection
+  **************************************/
+  .realisationSection {
+    width: 100%;
+    padding: 0.5em 0;
+  }
+
+  .realisationSection svg {
+    margin-top: -0.5em;
+  }
+}
+
+/*********************************************************
+style téléphone
+*********************************************************/
+@media screen and (max-width: 450px) {
+
+  /*****************************************************************************
+  header
+  *****************************************************************************/
+  header {
+    height: auto;
+  }
+
+  .me {
+    width: 75%;
+    font-size: 1.5em;
+  }
+
+  .devH2 {
+    width: 75%;
+    font-size: 1.5em;
+  }
+
+  .aboutH2 {
+    position: static;
+    font-size: 1.5em;
+    margin-left: 20px;
+    animation: none;
+  }
+
+  #menuNav {
+    padding: 7px 0;
+    width: auto;
+  }
+
+  #menuNav a {
+    width: 42%;
+    margin-bottom: 5px;
+    border-radius: 0;
+    font-size: 12px;
+    border-image-slice: 1;
+    transition: none;
+  }
+
+  #menuNav a:nth-of-type(even) {
+    text-align: right;
+  }
+
+  .aboutMe {
+    margin: 15px auto;
+    width: 85%;
+    text-align: left;
+    line-height: 1.3;
+    animation: none;
+  }
+
+  /*****************************************************************************
+  main
+  *****************************************************************************/
+  .mainH2 {
+    font-size: 1.3em;
+    padding: 13px 0;
+  }
+
+  .paddingSpan {
+    padding: 0 10px!important;
+  }
+
+  /**************************************
+  #langagesFrame
+  **************************************/
+  .frontend, .backend, .frameworks {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /**************************************
+  .expProSection
+  **************************************/
+  .expDiv {
+    width: inherit;
+    margin:  15px 0;
+  }
+
+  /**************************************
+  .realisationSection
+  **************************************/
+  .realisationSection {
+    width: 100%;
+    padding: 0.5em 0;
+  }
+
+  .realisationSection svg {
+    margin-top: -0.5em;
+  }
+
+  .realisationSection h3 {
+    width: 90%;
+    font-size: 1.1em;
+  }
+}

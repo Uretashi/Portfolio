@@ -2,11 +2,6 @@
 balises principal
 *****************************************************************************/
 
-/* noir mat
-background-color: #4d4855;
-background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
-*/
-
 html {
   scroll-behavior: smooth;
   margin: 0;
@@ -14,11 +9,9 @@ html {
 }
 
 body {
-  /*background: linear-gradient(to right, #090778 20%, #01004a 100%);*/
   background-image: url('../img/geo.jpg');
   background-attachment: fixed;
   background-position: bottom;
-  height: 2000px;
 }
 
 main {
@@ -34,12 +27,31 @@ p {
 }
 
 /*****************************************************************************
+scrollbar
+*****************************************************************************/
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #413E77;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #1d66db 0%, #09a7db 100%);
+  border-radius: 10px;
+}
+
+/*****************************************************************************
 header
 *****************************************************************************/
 
 header {
   width: 100%;
-  height: 500px;
+  height: 430px;
   background-image: url('../img/web.jpg');
   background-position: center;
   background-size: cover;
@@ -58,11 +70,45 @@ header {
 
 .menuPlaceholder {
   width: 100%;
-  height: 220px;
+  height: 30px;
 }
 
-header h2 {
-  font-size: 3em;
+.likeTerminal {
+  padding-top: 5em;
+  font-family: 'Inconsolata', monospace;
+  color: white;
+}
+
+.me {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.8em;
+  background-color: black;
+}
+
+@keyframes likeCMD {
+  0%{color: black;}
+}
+
+header .fa-terminal {
+  padding: 0.5%;
+  margin-right: 20px;
+  animation-name: likeCMD;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+}
+
+.devH2 {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  font-size: 2.3em;
+  background-color: black;
+}
+
+.aboutH2 {
+  font-size: 2.6em;
   position: absolute;
   top: 3em;
   left: 0.7em;
@@ -80,6 +126,7 @@ header h2 {
   position: fixed;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   background-color: rgba(0, 0, 0, 0.45);
   z-index: 2;
 }
@@ -135,7 +182,7 @@ main h2 i {
 }
 
 main section {
-  margin: 7% 0;
+  margin: 5% 0;
 }
 
 .mainH2 {
@@ -159,53 +206,65 @@ main section {
 /**************************************
 ensemble du contenu de #langagesFrame
 **************************************/
-
 #langagesFrame {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
+  line-height: 1.5;
 }
 
-#langagesFrame div {
-  width: 13%;
-  height: 10em;
-  border-radius: 15%;
-  text-align: center;
+.frontend, .backend, .frameworks {
+  width: 30%;
+  padding: 0 0 20px 0;
+  background-color: #012456;
+  color: white;
 }
 
-.php {
-  border: solid 3px #6E7289;
-  color: #6E7289;
+#langagesFrame h3 {
+  margin: 0 0 10px;
+  padding: 3px 0;
+  font-size: 1em;
+  background-color: white;
+  color: black;
 }
 
-.js {
-  border: solid 3px #F7DF1E;
-  color: #F7DF1E;
+#langagesFrame .fa-terminal {
+  margin: 0 4px;
+  padding: 3px;
+  background-color: #4474CD;
+  color: white;
 }
 
-.python {
-  border: solid 3px #396F9E;
-  color: #396F9E;
+#langagesFrame p {
+  margin-left: 20px;
 }
 
-.sql {
-  border: solid 3px #F8E595;
-  color: #F8E595;
+.ls {
+  color: yellow;
 }
 
-.html {
-  border: solid 3px #F16529;
-  color: #F16529;
+.directoryMain p {
+  margin-right: 20%;
+  display: inline-block;
+  border-bottom: white 1.5px dashed;
 }
 
-.css {
-  border: solid 3px #2862EA;
-  color: #2862EA;
+.directoryMain {
+  margin: 15px 0;
 }
 
-.jquery {
-  border: solid 3px #0769AD;
-  color: #0769AD;
+.directory {
+  display: flex;
+}
+
+.directory div {
+  margin-right: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.directory div:nth-child(2) {
+  margin-left: 5px;
 }
 
 /**************************************
@@ -278,17 +337,25 @@ ensemble du contenu de #langagesFrame
   flex-wrap: wrap;
 }
 
+#smoothBar {
+  display: block;
+  height: 5px;
+  background: linear-gradient(to right, #e310d8 0%, #0978bd 100%);
+  transition: all 0.7s ease;
+}
+
 .formationsDiv {
+  margin: 15px 0;
   width: 25em;
   padding: 5px 15px 15px;
   text-align: center;
-  background-color: #4d4855;
-  background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
-  border-radius: 5px 5px 80px 80px;
+  background-image: url('../img/square2.jpg');
+  background-attachment: fixed;
+  border-radius: 5px 5px 15px 15px;
+  -webkit-box-shadow: 0px 0px 60px 7px rgba(85,36,139,1);
+  -moz-box-shadow: 0px 0px 60px 7px rgba(85,36,139,1);
+  box-shadow: 0px 0px 60px 7px rgba(85,36,139,1);
   color: white;
-  -webkit-box-shadow: 0px 0px 30px 5px rgba(51,48,54,1);
-  -moz-box-shadow: 0px 0px 30px 5px rgba(51,48,54,1);
-  box-shadow: 0px 0px 30px 5px rgba(51,48,54,1);
 }
 
 .formationsDiv ul {
@@ -300,4 +367,60 @@ ensemble du contenu de #langagesFrame
 .formationsDiv i {
   margin-right: 6px;
   font-size: 1.1em;
+}
+
+/**************************************
+.realisationSection
+**************************************/
+.realisationSection {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  padding: 1.3em 0;
+  z-index: 1;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ed4eb6 0%, #09a3e0 100%)
+}
+
+.realisationSection svg {
+  z-index: -1;
+  position: absolute;
+  margin-top: -1.3em;
+}
+
+.realisationSection h3 {
+  width: 70%;
+  margin: 20px auto;
+  padding: 13px 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.75);
+  color: #00d5ff;
+}
+
+/*****************************************************************************
+footer
+*****************************************************************************/
+footer {
+  margin-top: 5%;
+  padding: 15px 0;
+  text-align: center;
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+}
+
+footer h2 {
+  font-size: 2em;
+  color: white;
+}
+
+footer p {
+  font-size: 1.6em;
+  color: white;
 }
