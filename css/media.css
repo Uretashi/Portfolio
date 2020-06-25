@@ -173,4 +173,40 @@ style téléphone
     width: 90%;
     font-size: 1.1em;
   }
+
+  /**************************************
+  .shifumi
+  **************************************/
+  #gameTimer {
+    width: 90%;
+    padding: 3% 0;
+    position: fixed;
+    text-align: center;
+    z-index: 2;
+    top: 3em;
+    font-size: 1.5em;
+  }
+
+  .shifumi {
+    padding: 10% 0;
+  }
+
+  .userChoice, .score, .JSchoice {
+    width: 70%;
+    margin: 40px 0;
+    height: 150px;
+  }
+
+  #userContent, #JScontent {
+    font-size: 3em;
+  }
+
+  #jsPointDiv {
+    top: 10em;
+    bottom: -2.5em;
+  }
+
+  .roundDiv {
+    height: 120px;
+  }
 }

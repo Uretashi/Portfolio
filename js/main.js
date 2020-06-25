@@ -15,6 +15,19 @@ const expH2span = document.querySelectorAll('.paddingSpan');
 
 const smoothBar = document.querySelectorAll('#smoothBar');
 
+const startGame = document.getElementById('game');
+
+const showWinner = document.getElementById('winner');
+
+const userPoint = document.querySelectorAll('.userPoint'),
+      jsPoint = document.querySelectorAll('.jsPoint'),
+      randomChoice = document.getElementById('JScontent');
+
+
+let userScore = 0,
+    jsScore = 0,
+    roundNumber = 1;
+
 /*************************************************************************************************/
 /* ***************************************** FONCTIONS ***************************************** */
 /*************************************************************************************************/
@@ -46,9 +59,145 @@ function getCurrentHour()
   document.getElementById('currentTime').innerHTML = currentTime;
 }
 
+function resetGame()
+{
+  userScore = 0;
+  jsScore = 0;
+  roundNumber = 1;
+
+  userPoint.forEach((point, i) => {
+    point.style.backgroundColor = 'transparent';
+    jsPoint[i].style.backgroundColor = 'transparent';
+  });
+
+  document.querySelector('.roundDiv').innerHTML = '';
+  document.getElementById('userContent').innerHTML = '';
+  document.getElementById('gameTimer').innerHTML = '';
+  randomChoice.innerHTML = '';
+
+  showWinner.innerHTML = '';
+  startGame.innerHTML = 'Start';
+}
+
+function gameTimer()
+{
+  const gameWords = ['Pierre 🤜', 'Papier ✋', 'Ciseaux ✂️ !'];
+
+  let i = 0;
+
+  let interval = setInterval(function(){
+    document.getElementById('gameTimer').innerHTML = gameWords[i];
+    i++;
+    if(i === 3)
+    {
+      clearInterval(interval);
+      i = 0;
+    }
+  }, 1000);
+}
+
+function gameplay()
+{
+  const shifumiArray = ['&#x1F91C;', '✋', '✂️'];
+
+  const random = Math.floor(Math.random() * Math.floor(3)),
+        userChoice = document.getElementById('userContent');
+
+  document.querySelectorAll('.choice').forEach((choice) => {
+    choice.onclick = function(){document.getElementById('userContent').innerHTML = choice.textContent};
+  });
+
+  setTimeout(function(){
+
+    randomChoice.innerHTML = shifumiArray[random];
+
+    let roundTag = document.createElement('p');
+
+    switch (true)
+    {
+      case randomChoice.textContent === '🤜' && userChoice.textContent === '✂️':
+        roundTag.textContent = 'Round N°'+ roundNumber++ +' Player : ✂️ _ 🤜 : JS ';
+        jsPoint[jsScore].style.backgroundColor = '#de4545';
+        jsScore++;
+        break;
+
+      case randomChoice.textContent === '🤜' && userChoice.textContent === '✋':
+        roundTag.textContent = 'Round N°'+ roundNumber++ +' Player : ✋ _ 🤜 : JS ';
+        userPoint[userScore].style.backgroundColor = '#45b3f7';
+        userScore++;
+        break;
+
+      case randomChoice.textContent === '✋' && userChoice.textContent === '🤜':
+        roundTag.textContent = 'Round N°'+ roundNumber++ +' Player : 🤜 _ ✋ : JS ';
+        jsPoint[jsScore].style.backgroundColor = '#de4545';
+        jsScore++;
+        break;
+
+      case randomChoice.textContent === '✋' && userChoice.textContent === '✂️':
+        roundTag.textContent = 'Round N°'+ roundNumber++ +' Player : ✂️ _ ✋ : JS ';
+        userPoint[userScore].style.backgroundColor = '#45b3f7';
+        userScore++
+        break;
+
+      case randomChoice.textContent === '✂️' && userChoice.textContent === '🤜':
+        roundTag.textContent = 'Round N°'+ roundNumber++ +' Player : 🤜 _ ✂️ : JS ';
+        userPoint[userScore].style.backgroundColor = '#45b3f7';
+        userScore++;
+        break;
+
+      case randomChoice.textContent === '✂️' && userChoice.textContent === '✋':
+        roundTag.textContent = 'Round N°'+ roundNumber++ +' Player : ✋ _ ✂️ : JS ';
+        jsPoint[jsScore].style.backgroundColor = '#de4545';
+        jsScore++;
+        break;
+
+      case userChoice.textContent.length === 0:
+        roundTag.textContent = 'Vous n\'avez rien choisi';
+        break;
+
+      default:
+        roundTag.textContent = 'Round N°'+ roundNumber++ +' égalité !';
+    }
+
+    document.querySelectorAll('.choice').forEach((choice) => {
+      choice.onclick = function(){};
+    });
+
+    document.querySelector('.roundDiv').append(roundTag);
+
+    startGame.innerHTML = 'Round N°'+ roundNumber;
+
+    if(userScore === 3)
+    {
+      showWinner.innerHTML = '<i class="fas fa-flag-checkered"></i>Vous avez gagné !<i class="fas fa-flag-checkered"></i>';
+      startGame.innerHTML = 'Rejouer';
+    }
+    else if(jsScore === 3)
+    {
+      showWinner.innerHTML = '<i class="fas fa-flag-checkered"></i>JS à gagné !<i class="fas fa-flag-checkered"></i>';
+      startGame.innerHTML = 'Rejouer';
+    }
+  },3000);
+}
+
 /*************************************************************************************************/
 /* ************************************** CODE PRINCIPAL *************************************** */
 /*************************************************************************************************/
+
+document.getElementById('reset').addEventListener('click', resetGame);
+
+startGame.addEventListener('click', function(){
+
+  if(userScore === 3 || jsScore === 3)
+  {
+    resetGame();
+  }
+  else
+  {
+    gameplay();
+    gameTimer();
+  }
+});
 
 window.addEventListener('scroll', function(e){
 
