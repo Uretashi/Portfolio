@@ -12,7 +12,6 @@ body {
   background-image: url('../img/geo.jpg');
   background-attachment: fixed;
   background-position: bottom;
-  height: 5000px;
 }
 
 main {
@@ -501,9 +500,9 @@ ensemble du contenu de #langagesFrame
 }
 
 #game, #reset {
-  width: 40%;
+  width: 45%;
   padding: 8px 0;
-  font-size: 1.1em;
+  font-size: 1em;
   cursor: pointer;
   border: solid 1px white;
   border-radius: 5px;
