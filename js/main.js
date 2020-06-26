@@ -253,3 +253,24 @@ for(let i = liDots.length; i--;)
 {
   liDots[i].style.backgroundColor = randomColour();
 }
+
+
+document.getElementById('contactForm').addEventListener('submit', function(){
+
+  //2633C6B681A1CD8622DDEC1702B740EA00B6E2D8EE72F6D364946BD04A21AC3B10BD86E4812CAD04D3F49D4726E0E4ED
+
+  event.preventDefault();
+
+    Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "alexandrehoffmann50@gmail.com",
+      Password : "6A3D9C97F09B86EA566B5B1683D2924F5F79",
+      To : 'alexandrehoffmann50@gmail.com',
+      From : document.getElementById('userMail').value,
+      Subject :  document.getElementById('subject').value,
+      Body :  document.getElementById('message').value
+  }).then(
+    message => alert(message)
+  );
+
+});

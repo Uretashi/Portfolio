@@ -186,7 +186,7 @@
         <h3><a href="#">Capeo.net</a> - Vente de machines industrielles -> à venir</h3>
       </section>
 
-      <h2 class="mainH2"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i><span class="paddingSpan">Un petit Pierre-Papier-Ciseaux ?</span><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></h2>
+      <h2 class="mainH2"><i class="fas fa-chevron-left"></i><span class="paddingSpan">Un petit Pierre-Papier-Ciseaux ?</span><i class="fas fa-chevron-right"></i></h2>
       <div>
         <p id="gameTimer"></p>
       </div>
@@ -230,11 +230,21 @@
     </main>
     <footer>
       <h2>Contact</h2>
-      <p><i class="fas fa-envelope"></i> alexandrehoffmann50@gmail.com</p>
+      <form id="contactForm">
+        <label for="userMail" aria-label="Votre Email"><i class="fas fa-envelope"></i>Votre Email</label>
+        <input id="userMail" name="userMail" type="email">
+
+        <label for="subject" aria-label="Sujet">Sujet</label>
+        <input id="subject" name="subject" type="text">
+
+        <label for="message" aria-label="Message">Message</label>
+        <textarea  id="message" name="message" rows="10" cols="35"></textarea>
+
+        <button type="submit" aria-label="Envoyer !">Envoyer !</button>
+      </form>
     </footer>
   </body>
 
-
+  <script src="js/smtp.js"></script>
   <script src="js/main.js"></script>
-
 </html>
