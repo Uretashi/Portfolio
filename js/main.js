@@ -15,6 +15,8 @@ const expH2span = document.querySelectorAll('.paddingSpan');
 
 const smoothBar = document.querySelectorAll('#smoothBar');
 
+const chevronDown = document.querySelector('.fa-chevron-circle-down');
+
 const startGame = document.getElementById('game');
 
 const showWinner = document.getElementById('winner');
@@ -257,20 +259,30 @@ for(let i = liDots.length; i--;)
 
 document.getElementById('contactForm').addEventListener('submit', function(){
 
-  //2633C6B681A1CD8622DDEC1702B740EA00B6E2D8EE72F6D364946BD04A21AC3B10BD86E4812CAD04D3F49D4726E0E4ED
-
   event.preventDefault();
 
-    Email.send({
-      Host : "smtp.elasticemail.com",
-      Username : "alexandrehoffmann50@gmail.com",
-      Password : "6A3D9C97F09B86EA566B5B1683D2924F5F79",
-      To : 'alexandrehoffmann50@gmail.com',
-      From : document.getElementById('userMail').value,
-      Subject :  document.getElementById('subject').value,
-      Body :  document.getElementById('message').value
-  }).then(
-    message => alert(message)
-  );
+  const mail = 'mailto:alexandrehoffmann50@gmail.com'
+             + '?from='+document.getElementById('userMail').value
+             + '&subject='+document.getElementById('subject').value
+             + '&body='+document.getElementById('message').value;
+
+  window.location.href = mail;
 
 });
+
+chevronDown.onclick = function(){
+
+  document.getElementById('rulsUl').classList.toggle('collapsed');
+  /*
+  if(document.getElementById('rulsUl').classList != 'collapsed')
+  {
+    chevronDown.style.transform = 'rotate(180deg)';
+    console.log('ok');
+  }
+  else if(chevronDown.style.transform = 'rotate(180deg)')
+  {
+    chevronDown.style.transform = 'rotate(360deg)';
+    console.log('not ok');
+  }
+  */
+};

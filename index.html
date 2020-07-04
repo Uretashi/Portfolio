@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Portfolio, Alexandre Hoffmann</title>
+    <title>Alexandre Hoffmann - Développeur Web</title>
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" href="img/logoTransparent.png">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/all.min.css">
@@ -43,7 +43,6 @@
         <div class="frontend">
           <h3><i class="fas fa-terminal"></i>Front-End</h3>
           <p class="windowsPowerShell">PS C:\Users\alexandre\frontEnd> <span class="ls">ls</span></p>
-          <!--<p class="directory">Répertoire : C:\Users\alexandre\backEnd</p>-->
           <div class="directoryMain">
             <p>Mode</p>
             <p>Name</p>
@@ -190,6 +189,21 @@
       <div>
         <p id="gameTimer"></p>
       </div>
+
+      <div class="ruls">
+        <p class="rulsP">Fonctionnement</p>
+
+        <ul id="rulsUl">
+          <li>Cliquez sur le boutton "Start" pour débuter la partie !</li>
+          <li>Suite au clique, vous disposeriez de trois secondes pour choisir entre les trois options</li>
+          <li>À la fin du round, le boutton Start indiquera le nombre du prochain tour, cliquez dessus pour continuer !</li>
+          <li>Si vous souhaitez reinitialiser la partie, le boutton "Reset" est là pour ça (on triche pas, hein !!)</li>
+          <li>Le premier ayant obtenu trois points, sera déclaré vainqueur 🏆</li>
+        </ul>
+
+        <i class="fas fa-chevron-circle-down"></i>
+      </div>
+
       <section class="shifumi">
         <div class="userChoice">
           <div id="userPointDiv">
@@ -230,21 +244,26 @@
     </main>
     <footer>
       <h2>Contact</h2>
-      <form id="contactForm">
-        <label for="userMail" aria-label="Votre Email"><i class="fas fa-envelope"></i>Votre Email</label>
-        <input id="userMail" name="userMail" type="email">
+      <form id="contactForm" netlify>
 
-        <label for="subject" aria-label="Sujet">Sujet</label>
-        <input id="subject" name="subject" type="text">
+        <fieldset>
+          <label for="userMail" aria-label="Votre Email"><i class="fas fa-envelope"></i>Votre Email</label>
+          <input id="userMail" name="userMail" type="email" required>
 
-        <label for="message" aria-label="Message">Message</label>
-        <textarea  id="message" name="message" rows="10" cols="35"></textarea>
+          <label for="subject" aria-label="Sujet"><i class="fas fa-envelope-open-text"></i>Sujet</label>
+          <input id="subject" name="subject" type="text" required>
 
-        <button type="submit" aria-label="Envoyer !">Envoyer !</button>
+          <button type="submit" aria-label="Envoyer !">Envoyer !</button>
+        </fieldset>
+
+        <fieldset>
+          <label for="message" aria-label="Message"><i class="fas fa-comment"></i>Message</label>
+          <textarea  id="message" name="message" rows="10" cols="35" required></textarea>
+
+        </fieldset>
       </form>
     </footer>
   </body>
 
-  <script src="js/smtp.js"></script>
   <script src="js/main.js"></script>
 </html>

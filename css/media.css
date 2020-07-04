@@ -245,4 +245,29 @@ style téléphone
   .roundDiv {
     height: 120px;
   }
+  /*****************************************************************************
+  footer
+  *****************************************************************************/
+  #contactForm {
+    padding-bottom: 10%;
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+
+  #contactForm fieldset:first-child {
+    margin-top: 5%;
+    padding-bottom: 0;
+  }
+
+  #contactForm label {
+    text-align: center;
+  }
+
+  #contactForm button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }

@@ -12,6 +12,7 @@ body {
   background-image: url('../img/geo.jpg');
   background-attachment: fixed;
   background-position: bottom;
+  height: 8000px;
 }
 
 main {
@@ -412,12 +413,56 @@ ensemble du contenu de #langagesFrame
   height: 20px;
 }
 
+.ruls {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.rulsP {
+  margin: 0;
+  background: linear-gradient(to left, #10b6e8 45%, orange 55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.ruls ul {
+  width: 70%;
+  max-height: 0;
+  margin: auto;
+  padding: 15px 20px;
+  text-align: left;
+  line-height: 1.5;
+  list-style: decimal;
+  font-size: 0.85em;
+  border-radius: 10px;
+  border: groove 2px #FFA500;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #00c4ff;
+  list-style-position: inside;
+  transition: all 0.2s linear;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.collapsed {
+  transform: scaleY(1);
+  max-height: 300px;
+}
+
+.fa-chevron-circle-down {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #10B6E8;
+  transform: rotate(360deg);
+}
+
 .shifumi {
   padding: 5% 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background: linear-gradient(to right, rgba(255, 0, 68, 0.7) 23%, rgba(37, 49, 217, 0.7) 100%);
+  background: linear-gradient(to right, rgba(255, 0, 68, 0.8) 23%, rgba(37, 49, 217, 0.8) 100%);
   border-radius: 10px;
 }
 
@@ -539,17 +584,81 @@ footer
 footer {
   margin-top: 5%;
   padding: 15px 0;
-  text-align: center;
+  /*
   background-color: #1fd1f9;
   background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  */
+  background-color: #453263;
+  border-top: 4px solid;
+  border-image-source: linear-gradient(to left, #4697e3 30%, #e8bca0 100%);
+  border-image-slice: 1;
 }
 
 footer h2 {
+  text-align: center;
   font-size: 2em;
   color: white;
 }
 
-footer p {
-  font-size: 1.3em;
+#contactForm {
+  display: flex;
+  justify-content: center;
+}
+
+#contactForm fieldset {
+  border: none;
+}
+
+#contactForm label {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  display: block;
+  text-align: initial;
+  font-size: 1.1em;
+  background: linear-gradient(to left, #10b6e8 0%, orange 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+}
+
+#contactForm i {
+  margin-left: 5px;
+  margin-right: 10px;
+  font-size: 1.2em;
+  background: linear-gradient(to right, #10b6e8 0%, orange 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#contactForm input {
+  padding: 2px;
+  margin-bottom: 15%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ededed;
+  border-radius: 5px 5px 0 0;
+  border: none;
+  border-bottom: solid 1.5px #4ecf71;
+}
+
+#contactForm textarea {
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-bottom: solid 1.5px #4ecf71;
+}
+
+#contactForm button {
+  width: 80%;
+  margin: auto;
+  padding: 6px 0;
+  display: block;
+  background-color: #0069D9;
+  border-color: #0069D9;
+  border-radius: 5px;
   color: white;
+  transition: all linear 0.3s;
+}
+
+#contactForm button:hover {
+ font-size: 1.05em;
 }
