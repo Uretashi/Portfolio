@@ -12,7 +12,6 @@ body {
   background-image: url('../img/geo.jpg');
   background-attachment: fixed;
   background-position: bottom;
-  height: 8000px;
 }
 
 main {
@@ -429,7 +428,7 @@ ensemble du contenu de #langagesFrame
 .ruls ul {
   width: 70%;
   max-height: 0;
-  margin: auto;
+  margin: 1px auto;
   padding: 15px 20px;
   text-align: left;
   line-height: 1.5;
@@ -440,14 +439,15 @@ ensemble du contenu de #langagesFrame
   background-color: rgba(0, 0, 0, 0.4);
   color: #00c4ff;
   list-style-position: inside;
-  transition: all 0.2s linear;
+  transition: all 0.4s linear;
   transform: scaleY(0);
   transform-origin: top;
 }
 
 .collapsed {
-  transform: scaleY(1);
-  max-height: 300px;
+  margin: 20px auto!important;
+  transform: scaleY(1)!important;
+  max-height: 300px!important;
 }
 
 .fa-chevron-circle-down {
@@ -455,6 +455,11 @@ ensemble du contenu de #langagesFrame
   cursor: pointer;
   color: #10B6E8;
   transform: rotate(360deg);
+  transition: all 0.4S linear;
+}
+
+.rotateChevron {
+  transform: rotate(180deg);
 }
 
 .shifumi {

@@ -101,6 +101,10 @@ style téléphone
 *********************************************************/
 @media screen and (max-width: 450px) {
 
+  body {
+    background-image: url('../img/geoMedia.jpg');
+  }
+
   /*****************************************************************************
   header
   *****************************************************************************/
@@ -205,6 +209,28 @@ style téléphone
   /**************************************
   .shifumi
   **************************************/
+  .rulsP {
+    margin-bottom: -10px;
+    font-size: 0.9em!important;
+  }
+
+  .ruls ul {
+    width: 85%;
+    font-size: 0.7em;
+  }
+
+  .ruls li {
+    margin-bottom: 10px;
+  }
+
+  .fa-chevron-circle-down {
+    font-size: 1.2em;
+  }
+
+  .collapsed {
+    max-height: 500px!important;
+  }
+
   #gameTimer {
     font-size: 1.5em
   }

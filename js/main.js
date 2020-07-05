@@ -273,6 +273,7 @@ document.getElementById('contactForm').addEventListener('submit', function(){
 chevronDown.onclick = function(){
 
   document.getElementById('rulsUl').classList.toggle('collapsed');
+  chevronDown.classList.toggle('rotateChevron');
   /*
   if(document.getElementById('rulsUl').classList != 'collapsed')
   {
