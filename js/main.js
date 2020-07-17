@@ -274,16 +274,4 @@ chevronDown.onclick = function(){
 
   document.getElementById('rulsUl').classList.toggle('collapsed');
   chevronDown.classList.toggle('rotateChevron');
-  /*
-  if(document.getElementById('rulsUl').classList != 'collapsed')
-  {
-    chevronDown.style.transform = 'rotate(180deg)';
-    console.log('ok');
-  }
-  else if(chevronDown.style.transform = 'rotate(180deg)')
-  {
-    chevronDown.style.transform = 'rotate(360deg)';
-    console.log('not ok');
-  }
-  */
 };
