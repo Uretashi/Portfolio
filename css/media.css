@@ -102,7 +102,7 @@ style téléphone
 @media screen and (max-width: 450px) {
 
   body {
-    background-image: url('../img/geoMedia.jpg');
+
   }
 
   /*****************************************************************************
@@ -159,7 +159,8 @@ style téléphone
   main
   *****************************************************************************/
   main {
-    padding: 0 3%;
+    padding: 1px 3%;
+    background-image: url('../img/geoMedia.jpg');
   }
 
   .mainH2 {

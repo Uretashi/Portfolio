@@ -56,9 +56,7 @@ function getCurrentHour()
   minutes = (minutes < 10 ? "0" : "") + minutes;
   seconds = (minutes < 10 ? "0" : "") + seconds;
 
-  let currentTime = hours + ':' + minutes + ':' + seconds;
-
-  document.getElementById('currentTime').innerHTML = currentTime;
+  document.getElementById('currentTime').innerHTML = hours + ':' + minutes + ':' + seconds;
 }
 
 function resetGame()
@@ -201,7 +199,7 @@ startGame.addEventListener('click', function(){
   }
 });
 
-window.addEventListener('scroll', function(e){
+window.addEventListener('scroll', function(){
 
   if(window.scrollY > 600)
   {
@@ -259,15 +257,12 @@ for(let i = liDots.length; i--;)
 
 document.getElementById('contactForm').addEventListener('submit', function(){
 
-  event.preventDefault();
-
   const mail = 'mailto:alexandrehoffmann50@gmail.com'
              + '?from='+document.getElementById('userMail').value
              + '&subject='+document.getElementById('subject').value
              + '&body='+document.getElementById('message').value;
 
   window.location.href = mail;
-
 });
 
 chevronDown.onclick = function(){

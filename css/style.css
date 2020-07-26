@@ -9,13 +9,14 @@ html {
 }
 
 body {
-  background-image: url('../img/geo.jpg');
-  background-attachment: fixed;
-  background-position: bottom;
+
 }
 
 main {
-  padding: 0 5%;
+  padding: 1% 5%;
+  background-image: url('../img/geo.jpg');
+  background-attachment: fixed;
+  background-position: bottom;
 }
 
 h2 {
@@ -587,12 +588,7 @@ ensemble du contenu de #langagesFrame
 footer
 *****************************************************************************/
 footer {
-  margin-top: 5%;
   padding: 15px 0;
-  /*
-  background-color: #1fd1f9;
-  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
-  */
   background-color: #453263;
   border-top: 4px solid;
   border-image-source: linear-gradient(to left, #4697e3 30%, #e8bca0 100%);
